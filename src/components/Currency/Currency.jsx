@@ -38,7 +38,7 @@ const Currency = () => {
   useEffect(() => {
     (async () => {
       try {
-        if (countPastTime() < 600000) {
+        if (countPastTime() < 600000000) {
           return;
         }
         setLoading(true);
