@@ -1,0 +1,31 @@
+.diagram_container {
+  position: relative;
+  width: 288px;
+  height: 288px;
+}
+
+.diagram_text {
+  position: absolute;
+  left: 38%;
+  top: 47%;
+  transform: translate(-10%, 0);
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27px;
+}
+
+@media screen and(min-width: 768px) and(max-width: 1279px) {
+  .diagram_container {
+    width: 336px;
+    height: 336px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .diagram_container {
+    width: 280px;
+    height: 280px;
+  }
+}

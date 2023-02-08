@@ -1,0 +1,84 @@
+.statistics-select__control {
+  background-color: inherit !important;
+  outline: none !important;
+  width: 182px !important;
+  height: 50px !important;
+  border: 1px solid var(--primary-text-color) !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+}
+
+@media screen and(min-width: 768px) and(max-width: 1279px) {
+  .statistics-select__control {
+    width: 160px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-select__control {
+    width: 280px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+.statistics-select__indicator-separator {
+  display: none;
+}
+.statistics-select__placeholder {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Circe' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+
+  color: var(--primary-text-color) !important;
+}
+.statistics-select__input-container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.statistics-select__value-container {
+  padding: 12px 5px 12px 20px !important;
+}
+
+.statistics-select__indicator {
+  padding: 0 20px 0 0 !important;
+}
+
+.css-tj5bde-Svg {
+  color: var(--primary-text-color) !important;
+}
+
+.statistics-select__menu {
+  margin-bottom: 15px !important ;
+  padding-top: 0 !important;
+  border: none !important;
+
+  background: rgba(211, 211, 211, 0.908) !important;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(25px) !important;
+
+  border-radius: 5px 5px 20px 20px !important;
+
+  animation: scaleIn 0.25s ease-in-out !important;
+}
+
+.statistics-select__single-value {
+  font-family: 'Circe' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+
+  color: var(--primary-text-color) !important;
+  text-align: left !important;
+}
+
+.statistics-select__option--is-focused {
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  background-color: lightblue !important;
+  color: var(--red-text-color) !important;
+}

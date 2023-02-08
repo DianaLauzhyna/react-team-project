@@ -1,0 +1,16 @@
+.statistics__title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  color: var(--primary-text-color);
+
+  margin-top: 32px;
+}
+
+@media screen and(min-width: 768px) and(max-width: 1279px) {
+  .statistics__title {
+    margin-top: 20px;
+  }
+}

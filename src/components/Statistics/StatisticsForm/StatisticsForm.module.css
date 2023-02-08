@@ -1,0 +1,29 @@
+.stats_form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.select-container {
+  outline: none;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 30px;
+}
+
+@media screen and(min-width: 768px) and(max-width: 1279px) {
+  .stats_form {
+    max-width: 336px;
+  }
+
+  .select-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .stats_form {
+    margin-top: 32px;
+    width: 280px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}

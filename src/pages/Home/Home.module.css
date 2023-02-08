@@ -1,0 +1,153 @@
+@media screen and (max-width: 767px) {
+
+  .tableBody .transactionsTableRow_header,
+  .table_head__alStart,
+  .table_head__alCenter,
+  .table_head__alEnd {
+    display: none;
+  }
+
+  .table_head_alStart,
+  .table_head_alCenter,
+  .table_head_alEnd {
+    display: flex;
+    font-family: 'Circe';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 300px;
+  }
+
+  .table_head_alStart[data-th]:before,
+  .table_head_alCenter[data-th]:before,
+  .table_head_alEnd[data-th]:before {
+    content: attr(data-th);
+    margin-right: auto;
+    font-family: 'Circe';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: start;
+  }
+
+  .noDataText {
+    border-radius: 20px;
+    padding: 8px;
+    background-color: var(--red-text-color);
+    color: var(--primary-white-color);
+    text-align: center;
+    font-family: 'Circe';
+    font-size: 24px;
+    font-weight: lighter;
+  }
+
+  .tableWrapper {
+    height: 57vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .transactionsTable {
+    width: 100%;
+    padding-top: 46px;
+    border: none;
+    border-collapse: collapse;
+  }
+
+  .tableWrapper {
+    height: 50vh;
+  }
+
+  .transactionsTableRow_header {
+    padding: 15px 20px;
+    background-color: var(--primary-white-color);
+    border-radius: 30px;
+    border: hidden;
+    overflow: hidden;
+    font-family: 'Circe';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    cursor: pointer;
+    transition: all ease-in-out 250ms;
+  }
+
+  .table_head__alStart {
+    text-align: start;
+  }
+
+  .table_head__alCenter {
+    text-align: center;
+  }
+
+  .table_head__alEnd {
+    text-align: end;
+  }
+
+  .table_head__alStart,
+  .table_head__alCenter,
+  .table_head__alEnd {
+    padding: 15px 0;
+  }
+
+  .tableHeaderBalance {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-right: 20px;
+  }
+
+  .tableHeaderType {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .tableHeaderDate {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 20px;
+  }
+
+  .noDataText {
+    border-radius: 20px;
+    padding: 8px;
+    background-color: var(--red-text-color);
+    color: var(--primary-white-color);
+    text-align: center;
+    font-family: 'Circe';
+    font-size: 24px;
+    font-weight: lighter;
+  }
+}
+
+/* ============DESKTOP STYLES========= */
+@media screen and (min-width: 1280px) {
+  .transactionsTable {
+    table-layout: fixed;
+  }
+
+  .noDataText {
+    margin-top: 150px;
+    padding: 10px 20px;
+  }
+
+  .tableWrapper {
+    height: 80vh;
+    padding-right: 100px;
+    margin-top: 46px;
+  }
+}
+
+.transactionsTableRow_header:hover,
+.transactionsTableRow_header:focus {
+  background-color: rgba(240, 240, 240);
+}
+
+.tableWrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.tableHeader {
+  position: sticky;
+  top: 0;
+}

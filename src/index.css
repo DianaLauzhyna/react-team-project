@@ -1,0 +1,184 @@
+@import-normalize; /*bring in normalize.css styles */
+@import url(./stylesheet/vars.css);
+@import url(./stylesheet/fonts.css);
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Circe', 'Circe Bold', 'Poppins' sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.active {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+/* ============== add Transaction modal styles ================ 58 - 183 lines ==== */
+
+.custom-select__control {
+  width: 410px !important;
+  padding: 0px !important;
+
+  font-family: 'Circe', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+
+  color: var(--grey-text-color) !important;
+
+  border: none !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  cursor: pointer !important ;
+}
+
+.custom-select__control--error {
+  composes: custom-select__control;
+  margin-bottom: -1px;
+  border-bottom: 1px solid var(--red-text-color) !important;
+}
+
+.custom-select__placeholder {
+  font-family: 'Circe', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+
+  color: var(--grey-text-color) !important;
+  text-align: left !important;
+}
+
+.custom-select__indicator-separator {
+  display: none !important;
+}
+
+.custom-select__indicator:hover {
+  color: rgb(31, 31, 31);
+}
+
+.custom-select__menu {
+  overflow: hidden;
+
+  font-family: 'Circe', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+
+  margin-top: 3px !important ;
+  padding-top: 0 !important;
+  border: none !important;
+
+  background: rgb(255, 255, 255) !important;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(25px) !important;
+
+  border-radius: 20px !important;
+
+  animation: scaleIn 0.15s ease-in-out;
+}
+
+.custom-select__single-value {
+  font-family: 'Circe', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+
+  color: var(--primary-text-color) !important;
+  text-align: left !important;
+}
+
+.custom-select__option {
+  position: relative !important;
+  z-index: 1000 !important;
+
+  font-family: 'Circe', sans-serif !important;
+
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+
+  text-align: left;
+}
+
+.custom-select__option--is-selected {
+  cursor: pointer !important;
+  background-color: rgba(255, 255, 255, 0.906) !important;
+  color: var(--red-text-color) !important;
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    scale: 0.9;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.react-datepicker__input-container {
+  position: unset;
+}
+
+@media screen and (max-width: 425px) {
+  .custom-select__control {
+    margin: 0 auto !important;
+    width: 280px !important;
+  }
+
+  .custom-select__control--error {
+    margin: 0 auto !important;
+    width: 280px !important;
+  }
+}
+
+/* ============== // add Transaction modal styles ================ 58 - 183 lines ==== */
