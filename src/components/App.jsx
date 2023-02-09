@@ -26,6 +26,7 @@ export const App = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const usertoken = useSelector(selectUserToken);
 
+  
   useEffect(() => {
     if (!isLoggedIn && usertoken) {
       dispatch(getCurrentUserInfoThunk());

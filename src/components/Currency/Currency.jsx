@@ -22,11 +22,13 @@ const Currency = () => {
 
   const prepareData = (data) => {
     const filteredData = data.filter(
-      (el) => el.ccy !== "RUR");
+      (el) => { if(el.cc === "USD" || el.cc === "EUR" || el.cc === "GBP") return el.cc
+    else return "" });
+      
     return filteredData.map((el) => ({
       ...el,
-      buy: Number(el.buy).toFixed(2),
-      sale: Number(el.sale).toFixed(2),
+      buy: Number(el.rate).toFixed(2),
+   
     }));
   };
 
@@ -38,7 +40,7 @@ const Currency = () => {
   useEffect(() => {
     (async () => {
       try {
-        if (countPastTime() > 60) {
+        if (countPastTime() < 60) {
           return;
         }
         setLoading(true);
@@ -60,7 +62,7 @@ const Currency = () => {
     <ul className={styles.currencyRatesHead} >
             <li>Currency</li>
             <li>Purchase</li>
-            <li>Sale</li>
+
           </ul>
           <div className={styles.conteinerdata}>
       {loading ? (
@@ -70,11 +72,10 @@ const Currency = () => {
       ) : null}
       {!error && !loading ? (
             <ul className={styles.currencyRatesList}>
-            {requestData.currency?.map(({ buy, sale, ccy }) => (
-              <li className={styles.currencyRatesListItem} key={ccy} >
-                <span className={styles.currencyData}>{ccy}</span>
-                <span className={styles.currencyData}>{buy}</span>
-                <span className={styles.currencyData}>{sale}</span>
+            {requestData.currency?.map(({ rate, cc }) => (
+              <li className={styles.currencyRatesListItem} key={cc} >
+                <span className={styles.currencyData}>{cc}</span>
+                <span className={styles.currencyData}>{rate}</span>
               </li>
             ))}
 
